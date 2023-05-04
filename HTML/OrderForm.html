@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Order</title>
+</head>
+<body>
+
+<form action="http://localhost:8080/emailreply" method="post" id="formAddMovie">
+    <div id="cardText">
+        <p>Submit an order</p>
+    </div>
+    <label for="inpName">Name</label><br>
+    <input type="text" required name="name" placeholder="Enter name" id="inpName"><br>
+
+    <label for="inpEmail">Email</label><br>
+    <input type="text" required name="email" placeholder="Enter email" id="inpEmail"><br>
+
+    <label for="inpWoodType">Wood Type</label><br>
+    <select id="inpWoodType" name="woodType">
+        <option disabled selected value>Enter wood type</option>
+        <option value="Oak">Oak</option>
+        <option value="Cherry">Cherry</option>
+        <option value="Pine">Pine</option>
+        <option value="Birch">Birch</option>
+
+    </select> <br>
+
+    <label for="inpPriceEstimate">Price Estimate</label><br>
+    <input type="text" required name="PriceEstimate" placeholder="Enter PriceEstimate" id="inpPriceEstimate"><br>
+
+    <label for="inpMetalType">Metal type</label><br>
+    <select id="inpMetalType" name="MetalType">
+        <option disabled selected value>Enter matal type</option>
+        <option value="Stainless steel">Stainless steel</option>
+        <option value="Cobber">Cobber</option>
+        <option value="Silver">Silver</option>
+        <option value="Bronze">Bronze</option>
+    </select> <br>
+
+    <label for="inpEngravingText">Engraving text</label><br>
+    <input type="text" required name="engravingText" placeholder="Enter engraving text" id="inpEngravingText"><br>
+    <br>
+
+    <a href="Frontpage.html">Cancel</a>
+    <button type="submit"
+            id="submitOrder"
+    >Submit order</button>
+</form>
+
+</body>
+</html>
