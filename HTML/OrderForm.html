@@ -6,7 +6,7 @@
 </head>
 <body>
 
-<form action="http://localhost:8080/emailreply" method="post" id="formAddMovie">
+<form action="http://localhost:8080/emailreply" method="post" id="formAddOrder">
     <div id="cardText">
         <p>Submit an order</p>
     </div>
@@ -20,26 +20,40 @@
     <select id="inpWoodType" name="woodType">
         <option disabled selected value>Enter wood type</option>
         <option value="Oak">Oak</option>
-        <option value="Cherry">Cherry</option>
-        <option value="Pine">Pine</option>
+        <option value="Dark Oak">Dark Oak</option>
+        <option value="Wenge">Wenge</option>
+        <option value="Iroko">Iroko</option>
+        <option value="Mahoginy">Mahoginy</option>
         <option value="Birch">Birch</option>
+        <option value="Beech">Beech</option>
 
+    </select> <br>
+
+
+    <label for="inpLeatherType">Leather type</label><br>
+    <select id="inpLeatherType" name="leatherType">
+        <option disabled selected value>Enter leather type</option>
+        <option value="Natural">Natural</option>
+        <option value="Red">Red</option>
+        <option value="Blue">Blue</option>
+        <option value="Black">Black</option>
+        <option value="Dark brown">Dark brown</option>
+        <option value="Green">Green</option>
+        <option value="Purple">Purple</option>
+        <option value="None">None</option>
+    </select> <br>
+
+    <label for="inpInlay">Inlay</label><br>
+    <select id="inpInlay" name="inlay">
+        <option disabled selected value>Enter inlay</option>
+        <option value="Metal logo">Metal logo</option>
+        <option value="Stamp in leather">Stamp in leather</option>
+        <option value="None">None</option>
+        <option value="Custom">Custom: write wish in comment</option>
     </select> <br>
 
     <label for="inpPriceEstimate">Price Estimate</label><br>
-    <input type="text" required name="PriceEstimate" placeholder="Enter PriceEstimate" id="inpPriceEstimate" value="111"><br>
-
-    <label for="inpMetalType">Metal type</label><br>
-    <select id="inpMetalType" name="MetalType">
-        <option disabled selected value>Enter matal type</option>
-        <option value="Stainless steel">Stainless steel</option>
-        <option value="Cobber">Cobber</option>
-        <option value="Silver">Silver</option>
-        <option value="Bronze">Bronze</option>
-    </select> <br>
-
-    <label for="inpEngravingText">Engraving text</label><br>
-    <input type="text" required name="engravingText" placeholder="Enter engraving text" id="inpEngravingText" value="2232"><br>
+    <input type="text" required name="priceEstimate" placeholder="Enter PriceEstimate" id="inpPriceEstimate" value="111"><br>
     <br>
 
     <a href="Frontpage.html">Cancel</a>
@@ -49,6 +63,6 @@
 
 </form>
 
-<script src="../js/fetch.js"></script>
+<script src="../js/formOrder.js"></script>
 </body>
 </html>
