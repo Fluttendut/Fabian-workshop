@@ -1,0 +1,27 @@
+body {background-color: darkslategray}
+
+#logoIcon {
+    width: 20%;
+    height: 20%;
+    display: flex;
+    margin: auto;
+    visibility: visible;
+    animation: fadeIn 5s;
+}
+
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+#stickweed {
+    width: 50%;
+    height: 50%;
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: -5%;
+    animation: fadeIn 5s;
+
+}
+
