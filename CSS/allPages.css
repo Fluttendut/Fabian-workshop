@@ -1,5 +1,5 @@
 @import url(https://fonts.googleapis.com/css?family=Raleway:400,200);
-img {width: 50%;}
+img {width: 7%;}
 body {margin-top: 0.5%; background-color: darkslategray}
 #cssmenu,
 #cssmenu ul,
@@ -15,6 +15,29 @@ body {margin-top: 0.5%; background-color: darkslategray}
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
+}
+
+.flex-container {
+    display: flex;
+    width: 95%
+}
+#aboutMe {
+    margin-left: 2%;
+}
+h3 {
+    border-style: solid;
+    border-width: 2px;
+    border-color: #5e3308;
+    color: #dddddd;
+    border-radius: 10px;
+    height: 68%;
+    background-image: url("https://t4.ftcdn.net/jpg/03/31/13/53/360_F_331135337_r7FY4tOpP3woiyeNQTarDw6va8wxvvGd.jpg");
+    padding-left: 2%;
+    padding-top: 2%;
+}
+#fabseImg {
+    width: 35%;
+    padding-right: 2%;
 }
 #cssmenu {
     width: 220px;
