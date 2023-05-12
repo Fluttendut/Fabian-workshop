@@ -1,12 +1,34 @@
-<!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <title>Gallery</title>
+    <style>
+        .gallery {
+            width: 100%;
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            grid-gap: 5px;
+        }
+
+        img {
+            width: 100%;
+            height: auto;
+        }
+    </style>
 </head>
 <body>
+<div class="gallery">
+    <script>
+        let imagePathArray = [];
 
+        // Iterate through the local folder containing images
+        let folderPath = "path/to/image/folder";
+        let filesInFolder = fs.readdirSync(folderPath);
+        filesInFolder.forEach(fileName => {
+            let filePath = folderPath + "/" + fileName;
+            imagePathArray.push(filePath);
+        });
 
-
-</body>
-</html>
+        // Iterate through the image paths array
+        imagePathArray.forEach(imagePath => {
+            let imgElement = document.createElement("img");
+            imgElement.src = imagePath;
+            document.
