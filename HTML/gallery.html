@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>test</title>
+
+  <style>
+    ul {
+      display: grid;
+      width: 300px;
+      height: 300px;
+      padding: 10px;
+      grid-template-columns: repeat(3, 1fr);
+      grid-gap: 10px;
+    }
+
+    li {
+      width: 100%;
+      height: 100%;
+      padding: 10px;
+    }
+  </style>
+</head>
+<body>
+
+<script
+        src="https://code.jquery.com/jquery-3.3.1.min.js"
+        integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+        crossorigin="anonymous">
+</script>
+<script type="text/javascript">
+    var folder = "../ImagesTestFolder"; //TODO: change this to the path to your folder with the images.
+    $.ajax({
+        url: folder,
+        success: function(data) {
+            $(data).find("a").attr("href", function(i, val) {
+                $("body").append("<img src='" + folder + '/' + val + "'>");
+            });
+        }
+    });
+</script>
+
+
+
+
+<div>
+    <ul>
+        <script type="text/javascript">
+            /*
+            for (var i = 0; i < 10; i++) {
+                var imagePath = "C:\Users\Username\Desktop\images\" + i + ".jpg";
+                document.write("<li><img src='" + imagePath + "' /></li>");
+            }
+             */
+        </script>
+    </ul>
+</div>
+</body>
+</html>

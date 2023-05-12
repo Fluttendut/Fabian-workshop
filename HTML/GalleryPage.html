@@ -15,10 +15,12 @@
     </style>
 </head>
 <body>
+hello
 <div class="gallery">
     <script>
         let imagePathArray = [];
-
+        "C:\Users\Michael\Pictures\ImagesTestFolder"
+        "C:/Users/Michael/Pictures/ImagesTestFolder"
         // Iterate through the local folder containing images
         let folderPath = "path/to/image/folder";
         let filesInFolder = fs.readdirSync(folderPath);
@@ -31,4 +33,9 @@
         imagePathArray.forEach(imagePath => {
             let imgElement = document.createElement("img");
             imgElement.src = imagePath;
-            document.
+            document.querySelector('.gallery').appendChild(imgElement);
+        });
+    </script>
+</div>
+</body>
+</html>
