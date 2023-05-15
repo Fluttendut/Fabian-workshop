@@ -13,27 +13,36 @@
             height: auto;
         }
     </style>
+
+    <script
+            src="https://code.jquery.com/jquery-3.7.0.min.js"
+            integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g="
+            crossorigin="anonymous"></script>
+
 </head>
 <body>
-hello
+<p id="loadingText">
+    Loading images
+</p>
 <div class="gallery">
     <script>
-        let imagePathArray = [];
-        "C:\Users\Michael\Pictures\ImagesTestFolder"
-        "C:/Users/Michael/Pictures/ImagesTestFolder"
-        // Iterate through the local folder containing images
-        let folderPath = "path/to/image/folder";
-        let filesInFolder = fs.readdirSync(folderPath);
-        filesInFolder.forEach(fileName => {
-            let filePath = folderPath + "/" + fileName;
-            imagePathArray.push(filePath);
-        });
+        $.ajax({
+            type : "GET",
+            url  : "http://localhost:8080/gallery/images",
 
-        // Iterate through the image paths array
-        imagePathArray.forEach(imagePath => {
-            let imgElement = document.createElement("img");
-            imgElement.src = imagePath;
-            document.querySelector('.gallery').appendChild(imgElement);
+            success: function (data) {
+                var data = $.parseJSON(data);
+
+                for (var i = 0; i < data.images.length; i++) {
+                    $('.gallery').append(`<img src="gallery/${data.images[i]}">`);
+                }
+
+                $('#loadingText').remove();
+            },
+
+            error: function(xhr, status, error) {
+                alert(xhr.responseText);
+            }
         });
     </script>
 </div>
