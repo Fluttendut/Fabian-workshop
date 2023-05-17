@@ -1,5 +1,5 @@
 @import url(https://fonts.googleapis.com/css?family=Raleway:400,200);
-img {width: 7%;}
+img {width: 35%;}
 body {margin-top: 0.5%; background-color: darkslategray}
 #cssmenu,
 #cssmenu ul,
@@ -19,7 +19,7 @@ body {margin-top: 0.5%; background-color: darkslategray}
 
 .flex-container {
     display: flex;
-    width: 95%
+    width: 95%;
 }
 #aboutMe {
     margin-left: 2%;

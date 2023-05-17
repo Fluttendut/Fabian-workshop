@@ -5,32 +5,71 @@
             integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g="
             crossorigin="anonymous"></script>
     <link rel="stylesheet" href="../CSS/GalleryPage.css">
+    <link rel="stylesheet" href="../CSS/allPages.css">
+
 </head>
+<script src="https://code.jquery.com/jquery-latest.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script src="../js/Frontpage.js"></script>
 <body>
+
 <p id="loadingText">
     Loading images
 </p>
-<div class="gallery">
-    <script>
-        $.ajax({
-            type : "GET",
-            url  : "http://localhost:8080/gallery/images",
+<div class="container">
+<div class="flex-container">
 
-            success: function (data) {
-                var data = $.parseJSON(data);
+    <div id='cssmenu'>
+        <img src="../Images/FABHEST_TRANSP.png">
+        <ul>
+            <li><a href='Frontpage.html'>Home</a></li>
+            <li><a href='GalleryPage.html'>Gallery</a>
+            <li id="storeTab" class='has-sub'><a href='#'>Store</a>
+                <ul>
+                    <li class='has-sub'><a href='#'>Dicetray</a>
+                        <ul>
+                            <!-- <li><a href='#'>Basic dicetray</a></li> -->
+                            <li><a href='#'>Deluxe dicetray</a></li>
+                        </ul>
+                    </li>
+                    <li class='has-sub'><a href='#'>Swords</a>
+                        <ul>
+                            <li><a href='#'>The stick of truth</a></li>
 
-                for (var i = 0; i < data.images.length; i++) {
-                    $('.gallery').append(`<img src="gallery/${data.images[i]}">`);
-                }
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+            <li><a href='AboutMe.html'>About me</a></li>
+            <li><a href='ContactInfo.html'>Contact</a></li>
+        </ul>
+    </div>
 
-                $('#loadingText').remove();
-            },
+    <div class="flex-container">
+        <div class="gallery">
+            <script>
+                $.ajax({
+                    type: "GET",
+                    url: "http://localhost:8080/gallery/images",
 
-            error: function(xhr, status, error) {
-                alert(xhr.responseText);
-            }
-        });
-    </script>
+                    success: function (data) {
+                        var data = $.parseJSON(data);
+
+                        for (var i = 0; i < data.images.length; i++) {
+                            $('.gallery').append(`<img id="GalleryImages" src="gallery/${data.images[i]}">`);
+                        }
+
+                        $('#loadingText').remove();
+                    },
+
+                    error: function (xhr, status, error) {
+                        alert(xhr.responseText);
+                    }
+                });
+            </script>
+        </div>
+    </div>
+</div>
 </div>
 </body>
 </html>
