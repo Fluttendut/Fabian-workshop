@@ -9,6 +9,7 @@ body {background-color: darkslategray}
     grid-gap: 5px;
     overflow-y: auto;
     margin-left: 10px;
+
 }
 #GalleryImages {
     width: 100%;

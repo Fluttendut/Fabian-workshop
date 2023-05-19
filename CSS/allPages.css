@@ -24,6 +24,14 @@ body {margin-top: 0.5%; background-color: darkslategray}
 #aboutMe {
     margin-left: 2%;
 }
+
+#contactInfo {
+    align-content: center;
+    width: 70%;
+    height: auto;
+    margin-top: 5%;
+    margin-left: 34%;
+}
 h3 {
     border-style: solid;
     border-width: 2px;
@@ -33,6 +41,7 @@ h3 {
     height: 68%;
     background-image: url("https://t4.ftcdn.net/jpg/03/31/13/53/360_F_331135337_r7FY4tOpP3woiyeNQTarDw6va8wxvvGd.jpg");
     padding-left: 2%;
+    padding-right: 2%;
     padding-top: 2%;
 }
 #logo {
