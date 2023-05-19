@@ -1,5 +1,5 @@
 @import url(https://fonts.googleapis.com/css?family=Raleway:400,200);
-img {width: 35%;}
+
 body {margin-top: 0.5%; background-color: darkslategray}
 #cssmenu,
 #cssmenu ul,
@@ -35,6 +35,18 @@ h3 {
     padding-left: 2%;
     padding-top: 2%;
 }
+#logo {
+    width: 35%;
+}
+
+#collageImage {
+    align-content: center;
+    width: 70%;
+    height: auto;
+    margin-top: 2%;
+    margin-left: 8%;
+}
+
 #fabseImg {
     width: 35%;
     padding-right: 2%;
