@@ -21,7 +21,6 @@ async function handleAddFormSubmit(event) {
     let inlay = document.getElementById("inpInlay").value;
     let priceEstimate = document.getElementById("inpPriceEstimate").value;
 
-
     const order = {
         name: name.trim(),
         email: email.trim(),

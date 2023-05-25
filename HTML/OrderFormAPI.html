@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Order</title>
+</head>
+<body>
+
+<form id="formAddOrderAPI">
+  <div id="cardText">
+    <p>Submit an order</p>
+  </div>
+  <label for="inpName">Name</label><br>
+  <input type="text" required name="name" placeholder="Enter name" id="inpName" value="Mo"><br>
+
+  <label for="inpEmail">Email</label><br>
+  <input type="text" required name="email" placeholder="Enter email" id="inpEmail" value="mich5n69@stud.kea.dk"><br>
+
+  <label for="inpWoodType">Wood Type</label><br>
+  <select id="inpWoodType" name="woodType">
+    <option disabled selected value>Enter wood type</option>
+    <option value="Oak">Oak</option>
+    <option value="Dark Oak">Dark Oak</option>
+    <option value="Wenge">Wenge</option>
+    <option value="Iroko">Iroko</option>
+    <option value="Mahoginy">Mahoginy</option>
+    <option value="Birch">Birch</option>
+    <option value="Beech">Beech</option>
+  </select> <br>
+
+
+  <label for="inpLeatherType">Leather type</label><br>
+  <select id="inpLeatherType" name="leatherType">
+    <option disabled selected value>Enter leather type</option>
+    <option value="Natural">Natural</option>
+    <option value="Red">Red</option>
+    <option value="Blue">Blue</option>
+    <option value="Black">Black</option>
+    <option value="Dark brown">Dark brown</option>
+    <option value="Green">Green</option>
+    <option value="Purple">Purple</option>
+    <option value="None">None</option>
+  </select> <br>
+
+  <label for="inpInlay">Inlay</label><br>
+  <select id="inpInlay" name="inlay">
+    <option disabled selected value>Enter inlay</option>
+    <option value="Metal logo">Metal logo</option>
+    <option value="Stamp in leather">Stamp in leather</option>
+    <option value="None">None</option>
+    <option value="Custom">Custom: write wish in comment</option>
+  </select> <br>
+
+  <label id="commentLabel" for="comment-input">Comment:</label><br>
+  <input type="text" name="comment" placeholder="Enter Comment" id="comment-input">
+  <br>
+
+  <label for="inpPriceEstimate">Price Estimate</label><br>
+  <input type="text" required name="priceEstimate" placeholder="Enter PriceEstimate" id="inpPriceEstimate"><br>
+  <br>
+
+  <a href="Frontpage.html">Cancel</a>
+  <button type="submit"
+          id="button"
+  >Submit order</button>
+
+</form>
+
+<script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
+</script>
+
+<script type="text/javascript">
+  emailjs.init('AQfX8zRCaJ0GxZYKg')
+</script>
+
+<script src="../js/FormOrderAPI.js"></script>
+
+<script>
+function checkPrice() {
+
+let priceWood = 0;
+if (document.getElementById("oak-option").checked === true) {
+  priceWood = 500;
+}
+if (document.getElementById("dark-oak-option").checked === true) {
+  priceWood = 500;
+}
+if (document.getElementById("wenge-option").checked === true) {
+  priceWood = 500;
+}
+if (document.getElementById("iroko-option").checked === true) {
+  priceWood = 700;
+}
+if (document.getElementById("mahoginy-option").checked === true) {
+  priceWood = 700;
+}
+if (document.getElementById("birch-option").checked === true) {
+  priceWood = 900;
+}
+if (document.getElementById("beech-option").checked === true) {
+  priceWood = 900;
+}
+
+let priceLeather = 0;
+if (document.getElementById("natural-option").checked === true) {
+  priceLeather = 200;
+}
+if (document.getElementById("red-option").checked === true) {
+  priceLeather = 300;
+}
+if (document.getElementById("blue-option").checked === true) {
+  priceLeather = 300;
+}
+if (document.getElementById("black-option").checked === true) {
+  priceLeather = 300;
+}
+if (document.getElementById("dark-brown-option").checked === true) {
+  priceLeather = 400;
+}
+if (document.getElementById("purple-option").checked === true) {
+  priceLeather = 400;
+}
+if (document.getElementById("none-leather-option").checked === true) {
+  priceLeather = 0;
+}
+
+let priceInlay = 0;
+if (document.getElementById("metal-logo-option").checked === true) {
+    priceInlay = 100;
+}
+if (document.getElementById("stamp-in-leather-option").checked === true) {
+    priceInlay = 100;
+}
+if (document.getElementById("custom-option").checked === true) {
+    priceInlay = 200;
+}
+if (document.getElementById("none-inlay-option").checked === true) {
+    priceInlay = 0;
+}
+
+
+document.getElementById("inpPriceEstimate").value = priceWood + priceLeather + priceInlay;
+}
+</script>
+
+</body>
+</html>
+</body>
+</html>
