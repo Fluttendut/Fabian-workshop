@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Dice tray</title>
+    <link rel="stylesheet" href="../CSS/allPages.css">
+    <link rel="stylesheet" type="text/css" href="../CSS/product_page.css">
+    <script src="../js/product_page.js" defer></script>
+    <script src="https://code.jquery.com/jquery-latest.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="../js/Frontpage.js"></script>
+
+
+
+</head>
+<style>
+    .product-images {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 50%;
+    }
+
+    .product-images img {
+
+        width: 300px;
+        height: 300px;
+
+    }
+
+    .product-container {
+        margin-left: 5%;
+        margin-top: 3%;
+        padding-right: 3%;
+        background-color: silver;
+        padding: 45px;
+        border-radius: 5px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        width: 63%;
+
+    }
+
+
+</style>
+<body>
+<div class="flex-container">
+    <div id='cssmenu'>
+        <img id="logo" src="../Images/FABHEST_TRANSP.png">
+        <ul>
+            <li><a href='Frontpage.html'>Home</a></li>
+            <li><a href='GalleryPage.html'>Gallery</a>
+            <li id="storeTab" class='has-sub'><a href='#'>Store</a>
+                <ul>
+                    <li class='has-sub'><a href='#'>Dicetray</a>
+                        <ul>
+                            <li><a href='ShopPage.html'>Basic dicetray</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+            <li><a href='AboutMe.html'>About me</a></li>
+            <li><a href='ContactInfo.html'>Contact</a></li>
+        </ul>
+    </div>
+
+    <div class="product-container">
+        <div class="product-images">
+            <img src="../Images/dicetrayone.JPG" alt="Product Image 1">
+            <img src="../Images/dicetraytwo.JPG" alt="Product Image 2">
+            <img src="../Images/dicetraythree.JPG" alt="Product Image 3">
+        </div>
+
+        <div class="product-details">
+            <h1>Basic dice tray</h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla mollis, nunc nec pharetra pulvinar, ipsum libero placerat nibh, non scelerisque tellus nunc ut risus. Duis vel ullamcorper orci, egestas sollicitudin.</p>
+            <button id="enquiry-button">Enquiry</button>
+        </div>
+    </div>
+</div>
+
+
+    <dialog id="enquiry-dialog" class="dialog">
+        <form id="enquiry-form">
+            <fieldset>
+                <legend>Wood Options:</legend>
+                <input type="radio" id="oak-option" name="wood-options" value="=Oak" onclick="checkPrice()">
+                <label for="oak-option">Oak</label><br>
+                <input type="radio" id="dark-oak-option" name="wood-options" value="Dark Oak" onclick="checkPrice()">
+                <label for="dark-oak-option">Dark oak</label><br>
+                <input type="radio" id="wenge-option" name="wood-options" value="Wenge" onclick="checkPrice()">
+                <label for="wenge-option">Wenge</label><br>
+                <input type="radio" id="iroko-option" name="wood-options" value="Iroko" onclick="checkPrice()">
+                <label for="iroko-option">Iroko</label><br>
+                <input type="radio" id="mahoginy-option" name="wood-options" value="Mahoginy" onclick="checkPrice()">
+                <label for="mahoginy-option">Mahoginy</label><br>
+                <input type="radio" id="birch-option" name="wood-options" value="Birch" onclick="checkPrice()">
+                <label for="birch-option">Birch</label><br>
+                <input type="radio" id="beech-option" name="wood-options" value="Beech" onclick="checkPrice()">
+                <label for="beech-option">Beech</label>
+            </fieldset>
+            <fieldset>
+                <legend>Leather Options:</legend>
+                <input type="radio" id="natural-option" name="leather-options" value="Natural" onclick="checkPrice()">
+                <label for="natural-option">Natural</label><br>
+                <input type="radio" id="red-option" name="leather-options" value="Red" onclick="checkPrice()">
+                <label for="red-option">Red</label><br>
+                <input type="radio" id="blue-option" name="leather-options" value="Blue" onclick="checkPrice()">
+                <label for="blue-option">Blue</label><br>
+                <input type="radio" id="black-option" name="leather-options" value="Black" onclick="checkPrice()">
+                <label for="black-option">Black</label><br>
+                <input type="radio" id="dark-brown-option" name="leather-options" value="Dark Brown" onclick="checkPrice()">
+                <label for="dark-brown-option">Dark brown</label><br>
+                <input type="radio" id="purple-option" name="leather-options" value="Purple" onclick="checkPrice()">
+                <label for="purple-option">Purple</label><br>
+                <input type="radio" id="none-leather-option" name="leather-options" value="None Leather" onclick="checkPrice()">
+                <label for="none-leather-option">None</label>
+            </fieldset>
+            <fieldset>
+                <legend>Inlay Options:</legend>
+                <input type="radio" id="metal-logo-option" name="inlay-options" value="Metal-logo" onclick="checkPrice()">
+                <label for="metal-logo-option">Metal logo</label><br>
+                <input type="radio" id="stamp-in-leather-option" name="inlay-options" value="Stamp in leather" onclick="checkPrice()">
+                <label for="stamp-in-leather-option">Stamp in leather</label><br>
+                <input type="radio" id="custom-option" name="inlay-options" value="Custom" onclick="checkPrice()">
+                <label for="custom-option">Custom</label><br>
+                <input type="radio" id="none-inlay-option" name="inlay-options" value="None inlay" onclick="checkPrice()">
+                <label for="none-inlay-option">None</label>
+            </fieldset>
+            <label id="commentLabel" for="comment-input">Comment:</label>
+            <textarea id="comment-input" name="comment"></textarea><br>
+            <label for="name-input">Name:</label>
+            <input type="text" name="name" id="name-input"><br>
+            <label for="email-input">Email:</label>
+            <input type="email" name="email" id="email-input"><br>
+            <label for="inpPriceEstimate">Estimated price:</label>
+            <input type="text" required readonly name="priceEstimate" id="inpPriceEstimate"><br><br>
+
+            <button id="submit-button" type="submit" class="close-btn">
+                Submit
+            </button>
+            <button type="button" id="close-button">Close</button>
+        </form>
+    </dialog>
+</div>
+
+<script>
+    // Retrieve elements
+    const enquiryButton = document.getElementById("enquiry-button");
+    const closeButton = document.getElementById("close-button");
+    const enquiryDialog = document.getElementById("enquiry-dialog");
+
+    // Add an event listener to the enquiry button to open the dialog
+    enquiryButton.addEventListener("click", () => {
+        enquiryDialog.showModal();
+    });
+
+    // Add an event listener to the close button to close the dialog
+    closeButton.addEventListener("click", () => {
+        enquiryDialog.close();
+    });
+</script>
+<script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
+</script>
+<script type="text/javascript">
+    emailjs.init('AQfX8zRCaJ0GxZYKg')
+</script>
+<script src="../js/FormOrderAPI.js"></script>
+
+<script>
+    function checkPrice() {
+
+        let priceWood = 0;
+        if (document.getElementById("oak-option").checked === true) {
+            priceWood = 500;
+        }
+        if (document.getElementById("dark-oak-option").checked === true) {
+            priceWood = 500;
+        }
+        if (document.getElementById("wenge-option").checked === true) {
+            priceWood = 500;
+        }
+        if (document.getElementById("iroko-option").checked === true) {
+            priceWood = 700;
+        }
+        if (document.getElementById("mahoginy-option").checked === true) {
+            priceWood = 700;
+        }
+        if (document.getElementById("birch-option").checked === true) {
+            priceWood = 900;
+        }
+        if (document.getElementById("beech-option").checked === true) {
+            priceWood = 900;
+        }
+
+        let priceLeather = 0;
+        if (document.getElementById("natural-option").checked === true) {
+            priceLeather = 200;
+        }
+        if (document.getElementById("red-option").checked === true) {
+            priceLeather = 300;
+        }
+        if (document.getElementById("blue-option").checked === true) {
+            priceLeather = 300;
+        }
+        if (document.getElementById("black-option").checked === true) {
+            priceLeather = 300;
+        }
+        if (document.getElementById("dark-brown-option").checked === true) {
+            priceLeather = 400;
+        }
+        if (document.getElementById("purple-option").checked === true) {
+            priceLeather = 400;
+        }
+        if (document.getElementById("none-leather-option").checked === true) {
+            priceLeather = 0;
+        }
+
+        let priceInlay = 0;
+        if (document.getElementById("metal-logo-option").checked === true) {
+            priceInlay = 100;
+        }
+        if (document.getElementById("stamp-in-leather-option").checked === true) {
+            priceInlay = 100;
+        }
+        if (document.getElementById("custom-option").checked === true) {
+            priceInlay = 200;
+        }
+        if (document.getElementById("none-inlay-option").checked === true) {
+            priceInlay = 0;
+        }
+
+
+        document.getElementById("inpPriceEstimate").value = priceWood + priceLeather + priceInlay;
+    }
+</script>
+
+</body>
+</html>

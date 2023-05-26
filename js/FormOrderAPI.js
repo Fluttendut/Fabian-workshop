@@ -1,6 +1,6 @@
-const btn = document.getElementById('button');
+const btn = document.getElementById('submit-button');
 
-document.getElementById('formAddOrderAPI')
+document.getElementById('enquiry-form')
     .addEventListener('submit', function(event) {
         event.preventDefault();
 
